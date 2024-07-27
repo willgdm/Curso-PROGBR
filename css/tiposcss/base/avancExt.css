@@ -1,0 +1,284 @@
+/*PSEUDO ELEMENTOS*/
+
+/*Pseudo Elemento - estrutura*/
+/*elemento, classe e id::especificação*/
+
+/*Pseudo Elemento - first-line*/
+/*Define o estilo da primeira linha 
+do elemento, classe e id*/
+p::first-line{
+    color: red;
+}
+
+/*Pseudo Elemento - first-letter*/
+/*Define o estilo da primeira letra 
+do elemento, classe e id*/
+p::first-letter{
+    font-size: 50px;
+}
+
+ul{
+    list-style: none;
+}
+
+/*Pseudo Elemento - before*/
+/*Permite que se coloque um 
+conteúdo antes do elemento. classe e id*/
+li::before{
+    content: "A";
+}
+
+/*Pseudo Elemento - after*/
+/*Permite que se coloque um 
+conteúdo depois do elemento, classe e id*/
+li::after{
+    content: "B";
+}
+
+/*Pseudo Elemento - selection*/
+/*Define o estilo do texto do elemento, classe e id 
+quando está sendo selecionado*/
+p::selection{
+    background-color: yellow;
+    color: orange;
+}
+
+/*SELETORES*/
+
+/*Seletores - estrutura*/
+/*seletornome*/
+
+/*Seletores - * */
+/*Seleciona todos os elementos da página*/
+*{
+    background-color: green;
+    margin: 0;
+}
+
+/*Seletor - ,*/
+/*Seletor - estrutura*/
+/*nome(tag), .nome(classe), #nome(id),...*/
+/*Seleciona mais de um elemento, classe e id por vez*/
+p, .h1, #h2{
+    font-size: 16px;
+}
+
+/*Seletor -  */
+/*Seletor - estrutura*/
+/*nome(fora), nome(dentro) ...*/
+/*Seleciona um elemento, classe e id dentro de outro(a)*/
+header .p1{
+    background-color: white;
+}
+
+/*Seletor - >*/
+/*Seletor - estrutura*/
+/*nome(pai) > nome(filho)*/
+/*Seleciona o elemento, classe e id filho(a) 
+de acordo com o pai*/
+header > #p2 > .span{
+    background-color: aquamarine;
+}
+
+/*Seletor - +*/
+/*Seletor - estrutura*/
+/*nome + .nome*/
+/*Seleciona o elemento, classe e id posterior de outro(a)
+que não esteja dentro de outro(a) também*/
+.div1 + header{
+    background-color: blue;
+}
+
+/*Seletor - ~*/
+/*Seletor - estrutura*/
+/*nome ~ .nome*/
+/*Seleciona todos os elementos, classes e ids posteriores de outro(a)
+que não esteja dentro de outro(a) também*/
+header ~ p{
+    background-color: black;
+}
+
+/*Seletor - atributo*/
+/*Atributos - width, height, ...*/
+/*Seletor - estrutura*/
+/*[atributo]*/
+/*Seleciona todo elemento, classe e id que 
+tenha o atributo especificado*/
+[width]{
+    background-color: orange;
+}
+
+/*Seletor - title*/
+/*Seletor - estruturas*/
+/*[title~="titulo"]*/ /*Pelo menos uma palavra inteira*/
+/*[title^="titulo"]*/ /*Parte da primeira palavra(ex:tit)(nf:ulo)*/
+/*[title$="titulo"]*/ /*Última palavra inteira ou parte dela(ex:ulo)(nf:tit)*/
+/*[title*="titulo"]*/ /*Palavra inteira ou parte dela que tiver em qualquer lugar*/
+/*Seleciona todo elemento, classe e id que 
+tenha o título especificado*/
+[title*="t"]{
+    background-color: blueviolet;
+}
+
+/*PSEUDO CLASSES*/
+
+/*Pseudo Classe - estrutura*/
+/*elemento, classe e id:especifição*/
+
+/*Pseudo Classe - focus*/
+/*Define o estilo do elemento, classe e id 
+que está em foco*/
+input:focus{
+    color: red;
+}
+
+/*Pseudo Classe - first-child*/
+/*Define o estilo do elemento, classe e id 
+que é o primeiro filho de outro(a)*/
+/*Se o e, c e i não for o primeiro filho
+não funciona*/
+h5:first-child{
+    color: blue;
+}
+
+/*Pseudo Classe - first-of-type*/
+/*Define o estilo do elemento, classe e id 
+que é o primeiro do seu tipo dentro de outro(a)*/
+h3:first-of-type{
+    color: beige;
+}
+
+/*Pseudo Classe - nth-child*/
+/*Define o estilo do elemento, classe e id 
+de qualquer filho de outro(a)*/
+h3:nth-child(2n){ /*Sequência - n*/
+    color: white;
+}
+
+/*Pseudo Classe - nth-of-type*/
+/*Define o estilo do elemento, classe e id 
+de qualquer posição de acordo com o tipo
+dentro de outro(a)*/
+/*Se o numéro indicado não for correspondente
+a posição de nenhum filho não funciona*/
+li:nth-of-type(odd){ /*Classificação - even, odd*/
+    color: purple;
+}
+
+/*Pseudo Classe - last-child*/
+/*Define o estilo do elemento, classe e id 
+que é o último filho de outro(a)*/
+/*Se o e, c e i não for o último filho
+não funciona*/
+h3:last-child{
+    color: brown;
+}
+
+/*Pseudo Classe - last-of-type*/
+/*Define o estilo do elemento, classe e id 
+que é o último do seu tipo dentro de outro(a)*/
+h5:last-of-type{
+    color: aquamarine;
+}
+
+/*Pseudo Classe - nth-last-child*/
+/*Define o estilo do elemento, classe e id 
+de baixo para cima de qualquer filho de outro(a)*/
+/*Se o numéro indicado não for correspondente a
+posição do filho não funciona*/
+h5:nth-last-child(6){ /*Posição - numéro*/
+    color: orange;
+}
+
+/*Pseudo Classe - nth-last-type*/
+/*Define o estilo do elemento, classe e id 
+de baixo para cima de qualquer posição
+de acordo com o tipo dentro de outro(a)*/
+h5:nth-last-of-type(4){
+    color: pink;
+}
+
+/*Começo: numéron - número */
+/*Ex:3n-1 = Começa no 2, vai para o 5, depois 8, ...*/
+
+/*FUNÇÃO CALC CSS*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    background-color: blue;
+}
+
+.primeira{
+    display: inline-block;
+    /*Função Calc - px, %*/
+    /*Função Calc - estrutura*/
+    /*calc(numéro% -+ numéropx)*/
+    /*Permite calcular o tamanho de atributos
+    de elementos, classes e ids*/
+    width: calc(100% - 300px);
+    height: 300px;
+    background-color: yellow;
+    margin-right: -4px;
+    margin-bottom: -4px;
+}
+
+.segunda{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    margin-right: -4px;
+    margin-bottom: -4px;
+}
+
+/*TRANSFORMAÇÕES*/
+
+img{
+    width: 420px;
+    
+    /*Transformação - 
+    rotate(deg), scale(numéro, numéro), skew(deg, deg)
+    /*Permite transformar elementos, classes e ids*/
+    
+    /*Rotaciona o e, c e i*/
+    transform: rotate(45deg);
+    /*Modifica a escala tanto na vertical quanto na horizontal*/
+    transform: scale(0.5);
+    /*Desliza o e, c e i*/
+    transform: skew(45deg);
+}
+
+/*COMPATIBILIDADE*/
+
+/*shouldprefix.com*/
+/*caniuse.com*/
+
+/*Compatibilidade: -webkit-, -ms-, -moz-*/
+
+/*Edge, Safari, Chrome, Opera, IE, Firefox*/
+
+/*VARIÁVEIS NO CSS*/
+
+/*Tag html*/
+:root{
+    /*Variáveis - estrutura no root*/
+    /*--nomeVar: estilo*/
+    /*Permite mudar o estilo de vários(as)
+    elementos, classes e ids de uma vez só*/
+    --var_color: aqua;
+}
+
+.div2{
+    /*Variáveis - estrutura no e, c e i*/
+    /*var(--nome_var)*/
+    color: var(--var_color);
+}
+
+.div3{
+    color: var(--var_color);
+}

@@ -1,0 +1,133 @@
+.container {
+    background-color: darkgray;
+    height: 400px;
+    color: white;
+
+    /*FLEX DIRECTION*/
+
+    /*Flex direction - display:flex*/
+    /*Vai fazer com que os filhos tentem preencher
+    toda parte disponível do pai*/
+    display: flex;
+    /*Flex direction - row, column, column-reverse, row-reverse*/
+    /*Faz com que o e, c e i pai fique em linha
+    e os filhos, tentando preencher, em coluna*/
+    flex-direction: row;
+    /*Faz com que o e, c e i pai fique em coluna
+    e os filhos, tentando preencher, em linha*/
+    flex-direction: column;
+    /*Faz com que o e, c e i pai fique em coluna
+    e os filhos, tentando preencher, em linha
+    de baixo para cima*/
+    flex-direction: column-reverse;
+    /*Faz com que o e, c e i pai fique em linha
+    e os filhos, tentando preencher, em coluna
+    da direita para esquerda*/
+    flex-direction: row-reverse;
+
+    /*FLEX-WRAP*/
+
+    /*Flex-wrap - wrap, wrap-reverse, nowrap*/
+    /*Tenta proteger o tamanho do e, c e i, mantendo
+    o mesmo em qualquer espaço de tela, criando novas
+    linhas ou colunas*/
+    flex-wrap: wrap;
+    /*Tenta proteger o tamanho do e, c e i, mantendo
+    o mesmo em qualquer espaço de tela, criando novas
+    linhas, de baixo para cima, ou colunas
+    da direita para esquerda*/
+    flex-wrap: wrap-reverse;
+
+    /*FLEX-FLOW*/
+
+    /*Uni os atributos flex-direction e flex-wrap
+    em um único atributo*/
+    flex-flow: column-reverse wrap-reverse;
+
+    /*JUSTIFY CONTENT + ALIGN ITEMS*/
+
+    /*Justify content - flex-end, flex-start(padrão), 
+    space-between, space-around*/
+    /*Justifica o conteúdo colocando ele no final
+    da esquerda para direita(row) ou cima para baixo(column)*/
+    justify-content: flex-end;
+    /*Tenta manter um espaço igual entre os e, c e i*/
+    justify-content: space-between;
+    /*Tenta manter um espaço igual ao redor dos e, c e i*/
+    justify-content: space-around;
+    /*Tenta manter um espaço igual entre os e, c e i
+    e também entre a borda*/
+    justify-content: space-evenly;
+
+
+    /*Align items - center, flex-end, flex-start
+    stretch(padrão)*/
+    /*Alinha os itens colocando eles no final
+    de cima para baixo(row) ou esquerda para direita(column)*/
+    align-items: flex-end;
+
+    /*ALIGN CONTENT*/
+
+    /*Align Content - stretch(padrão), center, 
+    flex-start*/
+    /*Centraliza os e, c e i tirando o espaço 
+    entre as linhas e as colunas*/
+    align-content: center;
+    /*Tira o espaço entre as linhas e as colunas
+    entre os e, c e i*/
+    align-content: flex-start;
+    /*Tira o espaço entre as linhas e as colunas
+    entre os e, c e i colocando no final também
+    de cima para baixo(row) ou esquerda para direita(column)*/
+    /*Tenta manter um espaço igual entre os e, c e i
+    de acordo com as linhas ou colunas*/
+    align-content: space-between;
+    /*Tenta manter um espaço igual ao redor dos e, c e i
+    de acordo com as linhas ou colunas*/
+    align-content: space-around;
+    
+
+    
+
+}
+
+.r1 {
+    background-color: red;
+
+    /*ORDER*/
+
+    /*Ordem - números(+-)*/
+    /*Altera a ordem dos e, c e i*/
+    order: 3;
+
+    /*ALIGN-SELF*/
+
+    /*Align self - center, flex-end, stretch(padrão)*/
+    /*Alinha um item colocando ele no final
+    de cima para baixo(row) ou esquerda para direita(column)*/
+    align-self: flex-end;
+}
+
+.r2 {
+    /*FLEX-GROW*/
+
+    /*Flex grow - 0(padrão), 1*/
+    /*Define se os e, c e i crescem ou não*/
+    flex-grow: 1;
+    background-color: blue;
+}
+
+.r3 {
+    background-color: green;
+
+    /*FLEX-SHRINK*/
+
+    /*Flex shrink - 0, 1(padrão)*/
+    /*Define se os e, c e i encolhem ou não*/
+    flex-shrink: 0;
+}
+
+.rect {
+    width: 100px;
+    height: 100px;
+}

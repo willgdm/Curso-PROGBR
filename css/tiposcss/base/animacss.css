@@ -1,0 +1,182 @@
+/*KEYFRAMES*/
+
+/*Keyframes - estrutura*/
+/*@keyframes nome{
+    from {propriedade}
+    to {propriedade}
+}
+/*Cria a animação*/
+/* @keyframes changeColor{
+    
+    /*from e to - estrutura*/
+    /*from/to {propriedade}*/
+    /*Modifica as propriedades indo de um valor 
+    para outro*/
+    /*de*//* from {background-color: red;}
+
+    /*para*//* to {background-color: blue;}
+} */
+
+/* .box{
+    width: 200px;
+    height: 200px;
+    border-style: solid; */
+    /*Tem como valor o nome da animação*/
+    /* animation-name: changeColor;
+    /*Quanto tempo vai levar pras propriedades irem
+    do estado A até o estado B*/
+    /* animation-duration: 3s;
+} */
+
+/*ADICIONANDO ESTADOS A ANIMAÇÃO*/
+
+/* @keyframes changeColor{
+    
+    /*Usando porcentagem invés de from e to*/
+    /*Possibilitando adicionar mais estados a animação*/
+    /* 0% {background-color: red;}
+    50% {background-color: purple;}
+    100% {background-color: blue;}
+} */
+
+/* .box{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: changeColor;
+    animation-duration: 10s;
+} */
+
+/*PROPRIEDADES*/
+/*DELAY*/
+/*FILL MODE*/
+
+/* @keyframes changeColor{
+    
+    /*Modifica as propriedades background-color 
+    e width*/
+    /* 0% {background-color: red; width: 200px;}
+    25% {background-color: orange; width: 200px;}
+    50% {background-color: purple; width: 400px;}
+    100% {background-color: blue; width: 200px;}
+} */
+
+/* .box{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: changeColor;
+    animation-duration: 3s; */
+    /*Aplica um atraso na animação: +-number(s)*/
+    /*É possível colocar como valor um tempo negativo,
+    ou seja, a animação começa imediatamente,
+    mas é como se já tivesse passado o tempo indicado
+    da duração da animação*/
+    /* animation-delay: -5s; */
+
+    /*Determina a quantidade de vezes que a
+    animação acontece - number, infinite*/
+    /* animation-iteration-count: 2; */
+
+    /*Altera a direção da animação*/
+    /*Reverse:  100% a 0%*/
+    /*Alternate: 0% a 100%, 100% a 0%, 0% a 100%, ...*/
+    /*Alternate-reverse: 100% a 0%, 0% a 100%, 100% a 0%, ...*/
+    /* animation-direction: alternate;
+    animation-iteration-count: 3; */
+
+    /*Mantém um frame específico no final 
+    ou começo da animação*/
+    /*forwards - mantém o último frame no final*/
+    /*backwards - mantém o primeiro frame no começo*/
+    /*both - tanto quanto forwards quanto backwards*/
+    /* animation-delay: 2s;
+    animation-fill-mode: both; 
+
+} */
+
+/*TIMING FUNCTION*/
+/*SHORT HAND*/
+
+/* @keyframes move {
+    0% {left: 0px;}
+    100%{left: 300px;}
+} */
+
+/* .box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-style: solid; */
+
+    /*Animation separado*/
+    /* animation-name: move;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards; */
+    /*Animation junto - 1.Nome, 2.Duração, 
+    3.Função de tempo, 4.Delay, 5.Contagem de interações,
+    6.Direção, 7.Fill-Mode*/
+    /* animation: move 3s linear 0s 1 normal forwards;
+
+} */
+
+/*Define a velocidade da animação*/
+
+/* .div1{
+    /*Mesma velocidade do inicio ao fim*/
+    /* animation-timing-function: linear;
+} */
+
+/* .div2{
+    /*Rápida no inicio e lenta no final*/
+    /* animation-timing-function: ease;
+} */
+
+/* .div3{
+    /*Lenta no inicio e lenta no final*/
+    /* animation-timing-function: ease-in;
+} */
+
+/* .div4{
+    /*Rápido no inicio e linear no final*/
+    /* animation-timing-function: ease-out;
+} */
+
+/* .div5{
+    /*Lenta no inicio e linear no final*/
+    /* animation-timing-function: ease-in-out;
+} */
+
+/*TRANSITIONS*/
+
+/* .btn{
+    display: inline-block;
+    padding: 20px;
+    background-color: #428BCA;
+    color: #fff;
+    font-size: 30px; */
+
+    /*Transition separado*/
+    /*Seleciona as propriedades que estarão em transições*/
+    /* transition-property: background-color color;
+    /*Modifica as durações das transições*/
+    /* transition-duration: 1s;
+    /*Adiciona delays nas transições*/
+    /* transition-delay: 1s;
+    /*Define as velocidades da transições*/
+    /* transition-timing-function: ease;
+
+    /*Transition junto - 1.Propriedade > 2.Duração >
+    3.Delay > 4.Função de Tempo, ...*/
+    /* transition: background-color 500ms 1s ease-out, 
+    padding 3s 0s linear;
+
+}
+
+.btn:hover{
+    background-color: #2248CA;
+    color: black;
+} */

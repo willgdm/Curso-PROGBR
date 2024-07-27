@@ -1,0 +1,353 @@
+/*CORES*/
+
+/*Seletores de elemento - Cores*/
+h2{
+    /*Cor de texto hexadecimal reduzido*/
+    color: #000; /*FF0 = FFFF00*/
+}
+
+/*Seletores de id - Cores*/
+#op{
+    /*Cor de texto hexadecimal com alpha*/
+    color: #000000FF;
+}
+
+#op2{
+    /*Cor de texto rgba - red, green, blue(0 a 255), alpha(0 a 1)*/
+    color: rgba(255, 0s 0, 0.1);
+}
+
+#div{
+    /*Largura*/
+    width: 500px;
+    /*Altura*/
+    height: 200px;
+    /*Cor de fundo nome da cor*/
+    background-color: orange;
+    /*Background Gradiente - ângulo(deg)/posição(to bottom, right, left, top), cores(nome, %), transição(entre as cores, %)*/
+    background: linear-gradient(to right,red, 90%, green);
+}
+
+#mf{
+    /*Cor de texto hexadecimal reduzido com alpha*/
+    color: #FF05; /*#FF05 = #FFFF0055*/
+}
+
+
+/*Seletores de classe - Cores*/
+.luffy{
+    /*Cor hexadecimal*/
+    color: #467609;
+    /*Cor rgb - red, green, blue(0 a 255)*/
+    color: rgb(255, 0, 0);
+    /*Background separado*/
+    background-color: #FF0; /*Cor de fundo hexadecimal reduzido*/
+    background-image: url('../paginas/imagens/almirantes.webp'); /*Imagem de fundo*/
+    background-size: cover; /*Tamanho do fundo - auto, contain, cover*/
+    background-position: top; /*Posição do fundo - top, left, right, bottom, center*/
+    background-repeat: no-repeat;/* Repetição do fundo - no-repeat, repeat-x, repeat-y*/
+    background-attachment: fixed;/* Axeno do fundo - fixed*/
+    /*Background junto - 1.Cor, 2.Imagem, 3.Repetição, 4.Anexo, 5.Posição*/
+    background: rgb(255, 0, 0), 
+    url(''), 
+    no-repeat,
+    fixed,
+    top;
+}
+
+/*UNIDADES DE MEDIDA*/
+
+/*Seletores de id - Unidades de medida*/
+/*Unidades de medida fixas - cm, mm, in, px, pt, pc*/
+#marinha{
+    width: 500px;
+}
+
+#verde{
+    background-color: green;
+    width: 500px;
+    height: 350px;
+    /*Tamanho da fonte - px*/
+    font-size: 50px;
+}
+
+#imp{
+    width: 500px;
+}
+
+/*Unidades de medida relativas - %, vw, vh*/
+
+#azul{
+    width: 50vw;
+    height: 300px;
+    background-color: blue;
+}
+
+#vermelho{
+    width: 500px;
+    height: 350px;
+    background-color: red;
+}
+
+/*Seletores de classe - Unidades de medida*/
+
+.imagem{
+    width: 50%;
+}
+
+/*Unidades de medida relativas para fontes - em*/
+.container{
+    font-size: 10px;
+}
+
+.exemplo1{
+    font-size: 2em;
+}
+
+.exemplo2{
+    font-size: 2rem;
+}
+
+.exemplo3{
+    font-size: 2rem;
+}
+
+/*Seletores de elemento - Unidades de medida*/
+
+html{
+    font-size: 15px;
+}
+
+/*FONTES*/
+
+/*Seletores de elemento - Fontes*/
+/*Fontes - serif, sans-serif, monospace*/
+body{
+    font-family: serif;
+}
+
+/*Fontes sans-serif - arial, helvetica*/
+p{
+    font-family: Arial;
+}
+
+/*Fontes serif - times new roman(aspas)*/
+h1{
+    font-family: 'Times New Roman';
+}
+
+/*Backups - primeira, segunda(backup), terceira(backup)*/
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*Seletores de id - Fontes*/
+#op{
+    /*Estilo da fonte - italic*/
+    font-style: italic;
+    /*Tamanho da fonte - px*/
+    font-size: 20px;
+    /*Peso da fonte - bold, normal, graduações(100 a 950)*/
+    font-weight: bold;
+    /*Variação da fonte - normal, small-caps*/
+    font-variant: small-caps;
+}
+
+/*BORDA*/
+
+/*Seletores de id - Borda*/
+#div{
+    /*Borda separada*/
+    border-width: 1px 5px 10px 20px; /*Largura da borda - 2 valores(eixos y, x*), 4 valores(cima, direita, baixo, esquerda)*/
+    border-style: solid; /*Estilo da borda - solid, none, dashed*/
+    border-color: blue yellow; /*Cor da borda - 2 nomes(eixos y, x), 4 nomes(cima, direita, baixo, esquerda)*/
+    border-radius: 15px 20px 30px 10px; /*Arredondamento da borda - 2 valores(eixos y, x*), 4 valores(cima, direita, baixo, esquerda)*/
+}
+
+#mf{
+    /*Borda junta - 1.Largura, 2.Estilo, 3.Cor*/
+    border: 3px dashed green;
+}
+
+/*MARGEM E PADDING*/
+
+/*Seletores de id - Margem e Padding*/
+#primeira{
+    background-color: blue;
+    border: 5px solid black;
+    /*Padding separado - px, em*/
+    padding-top: 10px; /*Padding em cima*/
+    padding-bottom: 10px; /*Padding em cima*/
+    padding-left: 10px; /*Padding em cima*/
+    padding-right: 10px; /*Padding em cima*/
+}
+
+#segunda{
+    height: 100px;
+    background-color: red;
+    /*Margem separada - não soma, priori maior*/
+    margin-top: 10px; /*Margem em cima - px, em*/
+    margin-bottom: 10px; /*Margem em baixo - px, em*/
+    margin-left: 100px; /*Margem na esquerda - px, em*/
+    margin-right: 20px; /*Margem em direita - px, em*/
+}
+
+#terceira{
+    background-color: green;
+    /*Margem junta - 2 valores(eixos y, x), 4 valores(cima, direita, baixo, esquerda)*/
+    margin: 20px 20px;
+    /*Padding junto - 2 valores(eixos y, x), 4 valores(cima, direita, baixo, esquerda)*/
+    padding: 20px 20px 20px 20px;
+}
+
+/*BOX MODEL E BOX SIZING*/
+
+/*Seletores de id - Box Model e Box Sizing*/
+#num1{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    /*Alteram o tamanho total da div - padding, border*/
+    padding: 10px;
+    border: 10px solid black;
+    /*Tamanho da caixa - border-box*/
+    box-sizing: border-box;
+}
+
+#num2{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    color: white;
+}
+
+/*Seletores de elemento - Box Model e Box Sizing*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*OVERFLOW*/
+
+/*Seletores de classe - Overflow*/
+.card{
+    width: 300px;
+    height: 300px;
+    background-color: #ccc;
+    /*Vazamento - hidden, visible, scroll, auto*/
+    overflow: auto;
+    /*Vazamento eixo y*/
+    overflow-y: scroll;
+    /*Vazamento eixo x*/
+    overflow-x: hidden;
+}
+
+.lorem{
+    font-size: 20px;
+}
+
+/*ALINHAMENTO HORIZONTAL*/
+
+/*Seletores de id - Alinhamento Horizontal*/
+#minhaDiv{
+    background-color: green;
+    /*Alinhamento com Alinhamento de Texto - center*/
+    text-align: center;
+}
+
+#margem{
+    /*Alinhamento com Margem e Alinhamento de Texto - auto, center*/
+    margin: auto; /*Perde a margem em cima e em baixo*/
+    text-align: center;
+}
+
+/*Seletores de elemento - Alinhamento Horizontal*/
+p{
+    width: 400px;
+    /*Alinhamento com Margem na Esquerda e na Direita - auto*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+/*ESTILO DE LINK*/
+
+/*Seletores de elemento - Estilo de Link*/
+
+/*Estilo do link não visitado*/
+a{
+    background-color: cornflowerblue;
+    color: beige;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/*Estilo do link visitado*/
+a:visited{
+    background-color: blueviolet;
+}
+
+/*Estilo do link quando está com o mouse em cima*/
+a:hover{
+    padding: 20px;
+    background-color: black;
+}
+
+/*Estilo do link quando clicado*/
+a:active{
+    background-color: #444;
+}
+
+/*LISTAS*/
+
+/*Seletores de id - Listas*/
+
+#ul{
+    /*Estilo da lista não ordenada - disc, circle, square, none*/
+    list-style: circle;
+    /*Imagem do estilo da lista*/
+    list-style-image: url();
+    /*Posição do estilo da lista - inside, outside*/
+    list-style-position: inside;
+}
+
+#ol{
+    /*Estilo da lista ordenada - decimal, decimal-leading-zero, lower-roman, upper-roman, lower-alpha, upper-alpha*/
+    list-style: lower-roman;
+    background-color: #09c;
+    padding: 30px;
+}
+
+/*Seletores de elemento - Listas*/
+li{
+    background-color: aquamarine;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*CURSORES*/
+
+/*Seletores de classe - Cursores*/
+.cursor{
+    /*Cursor - default, pointer, crosshair, help, url()*/ 
+    cursor: url(), pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+

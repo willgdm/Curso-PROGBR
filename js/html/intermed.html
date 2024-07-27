@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Intermediário</title>
+
+    <!--ACESSANDO ELEMENTOS HTML COM JS-->
+
+    <style>
+        /*.paragrafo{
+            color: red;
+        }
+
+        span{
+            display: none;
+        }
+
+        .par4{
+            color: blue;
+        }*/
+
+        /* img {
+            width: 200px;
+            margin-bottom: 25px;
+        }
+
+        div {
+            display: inline;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        } */
+    </style>
+
+    <!--EVENTOS-->
+
+    <script>
+        /*function h1Click(){
+            console.log("h2 foi clicado");
+        }
+
+        function changeH1(){
+            let h1 = document.getElementById("h1");
+            console.log(h1);
+        }
+
+        function changeH2(/*argumento) {*/
+        // let h2 = document.getElementById("h2");
+        /*Com o this não precisa dessa linha*/
+        /* let input = document.getElementById("onchange");
+        h2.innerText = input.value; 
+    } */
+
+        /* function changeH3(){
+            let h3 = document.getElementById("h3");
+            let input = document.getElementById("oninput");
+            h3.innerText = input.value;
+        } */
+
+        /*function onOver(elemento){
+            elemento.style.backgroundColor = "red";
+        }
+
+        function onOut(elemento){
+            elemento.style.backgroundColor = "cornflowerblue"
+        } */
+
+        /* function loaded(){
+            let t = document.getElementById("titulo");
+
+            /*Maneiras de adicionar os eventos no JS
+            t.onclick = mudarText;
+            t.addEventListener("click", mudarText);
+        }*/
+
+        /* function mudarText(){
+            this.innerHTML = "Novo Texto";
+        } */
+
+        /* function f(e){
+            console.log("teste");
+            /*Objeto window*/
+        // console.log(this);
+        /*Undefined porque nenhum argumento foi
+        passado na função no HTML*/
+        /*Se o argumento lá for this imprimi
+        o elemento h1*/
+        /*console.log(e);
+    } */
+
+        /* function f1(e){
+            console.log("teste f1");
+            /*Elemento h1*/
+        // console.log(this);
+        /*Mouse event "click"*/
+        // console.log(e);
+        /*Elemento h1*/
+        /* console.log(e.target);
+    } */
+
+        /* window.onload = function(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            /*"click", nome sem parenteses*/
+        /* h1.addEventListener("click", f1);
+    
+    } */
+
+        /* window.onload = function(){
+            let d1 = document.getElementById("d1");
+            let h1 = d1.children[1]
+            /*Imprimi os elementos filhos(h1, p) do elemento pai(div)*/
+        // console.log(d1.children);
+        /*Imprimi o elemento pai(div)*/
+        /* console.log(h1.parentElement);
+        /*Imprimi os elementos filhos(div d1, div d2) do elemento pai(body)*/
+        // console.log(document.body.children)
+
+        // let t = document.getElementsByTagName("h1");
+
+        // for(let h of t){
+        /*Imprimi os elementos h1*/
+        // console.log(h);
+
+        /*Adiciona um evento que dispara ao se clicar 
+        nos elementos h1*/
+        /* h.addEventListener("click", qop)
+    } */
+
+        /* function qop(e){
+            /*Pega o elemento no mouse event*/
+        // let t = e.target;
+        /*Imprimi os elementos pais(div d1, div d2) ao se clicar nos 
+        elementos filhos(Titulo 1, Titulo 2) respectivamente*/
+        /* console.log(t.parentElement);
+    } 
+} */
+
+        /*BIBLIOTECA MATH*/
+
+        /*Realizar calcúlos matemáticos diversos*/
+        /*Constantes*/
+        /* let con = Math.PI;
+        console.log(con); */
+        /*Raiz quadrada*/
+        /* let qua = Math.sqrt(16);
+        console.log(qua); */
+        /*Potência*/
+        /* let pot = Math.pow(2, 3);
+        console.log(pot); */
+        /*Número aleatório entre 0 e 1*/
+        /* let alet = Math.random();
+        console.log(alet); */
+        /*Arredondamento - >5 e <5.5 = 5 & >=5.5 e <6 = 6*/
+        /* let arre = Math.round(5.5);
+        console.log(arre); */
+        /*Piso - >5 e <6 = 5*/
+        /* let flo = Math.floor(5.75);
+        console.log(flo); */
+        /*Teto - >5 = 6*/
+        /* let cei = Math.ceil(5.001);
+        console.log(cei); */
+
+        /*JSON*/
+
+        /*Pega um objeto JSON e transforma em uma string*/
+        /*let a = {
+            nome:"Igor",
+            nota:8.5
+        }
+        console.log(a);
+        let b = JSON.stringify(a);
+        console.log(b); */
+
+        /*Pega uma string e transforma em um objeto JSON*/
+        /* let a2 = '{"nome": "Fábio", "nota": 7.8}';
+        console.log(a2);
+        let b2 = JSON.parse(a2);
+        console.log(b2); */
+
+        /*LOCAL STORAGE*/
+
+        /*Grava dados na memória do navegador*/
+        /*("chave", "valor")*/
+        // localStorage.setItem("nome", "Igor");
+
+        /*Pega dados da memória do navegador*/
+        /*("chave")*/
+        /* let n = localStorage.getItem("nome");
+        console.log(n); */
+
+        /*Remove dados da memória do navegador*/
+        /*("chave")*/
+        // localStorage.removeItem("nome");
+
+        /*Apaga tudo que tem na memória do navegador*/
+        // localStorage.clear(); 
+
+        /*EXEMPLO COM STRING*/
+
+        /* onload = function(){
+            /*Pega o dado com a chave "nome"*/
+        // let nome = localStorage.getItem("nome");
+        /*Pega o elemento h1 e coloca o valor do input
+        nele, mas, mesmo com carregamento, esse valor
+        se mantém*/
+        /* let h1 = document.getElementById("nome");
+        h1.innerHTML = nome;
+    } */
+
+        /* function atualizar(element){
+            /*Coloca o valor do input na váriavel
+            -valor- e imprimi*/
+        /* let valor = element.value;
+        console.log(valor); */
+
+        /*Pega o elemento h1 e coloca o valor do 
+        input nele*/
+        /* let h1 = document.getElementById("nome");
+        h1.innerHTML = valor; */
+
+        /*Grava um dado de acordo com o valor
+        do input*/
+        /* localStorage.setItem("nome", valor);
+
+    } */
+
+        /*EXEMPLO COM NUMBER*/
+
+        /*Grava o objeto em forma de string*/
+        /* let a = {
+            nome:"Igor",
+            nota: 7.3
+        }
+        localStorage.setItem("aluno", JSON.stringify(a));
+        */
+
+        /*Pega a string em forma de objeto*/
+        /* let a = localStorage.getItem("aluno");
+        console.log(JSON.parse(a)); */
+
+        /*SORTEIO*/
+
+        /* let pessoas = ["Igor", "José", "Marcos", "Pamela","Joana"]
+
+        function sortear(){
+            let np = pessoas.length;
+
+            let ns = Math.floor(Math.random() * np);
+
+            document.getElementById("d").innerHTML = pessoas[ns];
+        } */
+
+        /* function mudarCor(){
+            let h = document.getElementsByTagName("h1")[0];
+            h.style.color = "blue";
+        }
+
+        function mudarTexto(){
+            let h = document.getElementsByTagName("h1")[0];
+            h.innerHTML = "Novo titulo";
+
+            /*Aplica um delay entre o disparo da
+            função e sua execução*/
+        // setTimeout(mudarCor, 1000);
+        // }
+
+        /* var numero = 0;
+
+        function atualizarText(){
+
+           let h = document.getElementsByTagName("h1")[1];
+           h.innerHTML += " " + numero;
+           numero++;
+
+        }
+
+        function mudarText(){
+            /*Aplica um delay entre o disparo e
+            a execução de uma função que repete*/
+        /* setInterval(atualizarText, 3000);
+    } */
+
+        /* var interval;
+
+        var numero = 0;
+
+        function atualizarText() {
+
+            let h = document.getElementsByTagName("h1")[2];
+            h.innerHTML += " " + numero;
+            numero++;
+
+        }
+
+        function iniciar() {
+
+            interval = setInterval(atualizarText, 3000);
+
+        }
+
+        function parar() {
+
+            /*Apaga um intervalo em andamento*/
+            // clearInterval(interval);
+
+            /*Apaga um timeout em andamento*/
+            // clearTimeout(timer);
+
+        // } 
+
+    </script>
+
+
+
+</head>
+
+<!--onload = ""-->
+<!--Atributo que dispara um evento ao se
+completar o carregamento de uma página-->
+
+<body>
+
+    <!--ACESSANDO ELEMENTOS HTML COM JS-->
+
+    <!--<h1>Título</h1>
+    <p class="paragrafo" id="p1">Parágrafo 1</p>
+        <span>Outro texto</span>
+    <p class="paragrafo">Parágrafo 2</p>
+    <p>Parágrafo 3</p>
+    <p class="par4" id="p4">Parágrafo 4</p>
+    <p id="p5">Parágrafo 5</p>
+    <p meuAtt="William" id="p6">Parágrafo 6</p>-->
+
+    <!--EVENTOS-->
+
+    <!--Atributo que dispara um evento ao se
+    clicar no conteúdo da tag-->
+    <!--Imprimi no console o valor passado ao se
+    clicar no conteúdo da tag*/-->
+    <!--<h1 onclick="console.log('h1 foi clicado')">
+    Clique em mim
+    </h1>-->
+    <!--Chama uma função que imprimi no console 
+    o valor passado ao se clicar no conteúdo da tag*/-->
+    <!--<h2 onclick="h1Click()">Clique em mim 2</h2>-->
+    <!--Imprimi o próprio elemento
+    ao se clicar no conteúdo da tag-->
+    <!--<h3 onclick="console.log(this)">Clique em mim 3</h3>-->
+    <!--Dá uma cor ao conteúdo da tag-->
+    <!--<h4 onclick="this.style.color = 'red'">Clique em mim 4</h4>-->
+
+
+    <!--Atributo que dispara um evento ao se
+    tirar o foco do conteúdo da tag-->
+    <!--<h1 id="h1">Click in me</h1>
+    <h2 id="h2">Click in me 2</h2>
+    <h3 id="h3">Click in me 3</h3>-->
+    <!--Chama uma função que imprimi o elemento h1 
+    sempre que o foco é tirado do input-->
+    <!--<input type="text" onchange="changeH1()">-->
+    <!--Chama uma função que muda o conteúdo do h2
+    dependendo do valor do input quando seu foco
+    é tirado-->
+    <!--<input type="text" id="onchange" onchange="changeH2()">-->
+    <!--Variação com this como argumento-->
+    <!-- <input type="text" onchange="changeH2(this)"> -->
+
+    <!--Atributo que dispara um evento ao se
+    colocar conteúdo na tag-->
+    <!--<input id="oninput" type="text" oninput="changeH3()">-->
+
+    <!--EVENTOS 2-->
+
+    <!--<img src="/material/Imagens/opd_desc.jpg" alt="">
+    <br>-->
+    <!--Atributo que dispara um evento ao se
+    colocar o mouse em cima do conteúdo da tag-->
+    <!--Atributo que dispara um evento ao se
+    tirar o mouse de cima do conteúdo da tag-->
+    <!--<div onmouseover="onOver(this)" onmouseout="onOut(this)">Click</div>-->
+
+    <!--EVENTOS 3-->
+
+    <!--<h1 id="titulo">teste</h1>-->
+
+    <!--THIS-->
+
+    <!--<h1 id="t1">titulo 1</h1>
+     <h2 id="t2">titulo 2</h2>
+
+     <script>
+        let t1 = document.getElementById("t1");
+        let t2 = document.getElementById("t2");
+        
+        t1.onclick = colocarEmMaiusculo;
+        t2.onclick = colocarEmMaiusculo;
+
+        function colocarEmMaiusculo(){
+            /*O this muda de acordo com o contexto*/
+            /*Nesse caso, o contexto inicial é que os dois
+            titulos estão minusculos, então ele vale pros dois.
+            Quando um é clicado, ele deixa de valer pra esse,
+            mas continua valendo pro outro*/
+            this.innerHTML = this.innerHTML.toUpperCase();
+        }
+     </script>-->
+
+    <!--PARENTESES NAS FUNÇÕES-->
+
+    <!--Com (): Executando a função-->
+    <!--Sem (): Retornando a função-->
+
+    <!--MANEIRAS DE CRIAR UM EVENTO-->
+
+    <!--onclick ="nome()"-->
+    <!--<h1 onclick="f()">Title</h1>-->
+
+    <!--ELEMENTOS PAI E FILHO-->
+
+    <!--<div id="d1">
+        <h1>Titulo</h1>
+        <p>Qualquer texto</p>
+    </div>
+
+    <div id="d2">
+        <h1>Titulo 2</h1>
+        <p>Qualquer texto 2</p>
+    </div>-->
+
+    <!--LOCAL STORAGE-->
+
+    <!--<h1 id="nome"></h1>
+    <input type="text" oninput="atualizar(this)">-->
+
+    <!--SORTEIO-->
+
+    <!--<h1 id="d"></h1>
+    <button onclick="sortear()">Sortear</button>-->
+
+    <!--TIMER E INTERVALO-->
+
+    <!--<h1>Título</h1>
+    <input type="submit" onclick="mudarTexto()" value="Mudar">
+
+    <h1>Título 2</h1>
+    <input type="submit" onclick="mudarText()" value="Mudar">
+
+    <h1>Título 3</h1>
+    <input type="submit" onclick="iniciar()" value="Iniciar">
+    <input type="submit" onclick="parar()" value="Parar">-->
+
+    <script src="../base/intermed.js"></script>
+
+</body>
+
+</html>

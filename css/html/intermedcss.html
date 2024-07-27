@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!--VIEWPORT-->
+    <!--Deixar a página responsiva-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Intermediário</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            padding-left: 5px;
+            margin-right: 5px;
+            /*Float - left, right, none*/
+            /*O elemento vai ficar flutuando na direção
+            indicada em relação ao próximo elemento*/
+            float: left;
+        }
+
+        .quadrado {
+            width: 100px;
+            height: 100px;
+        }
+
+        .quadrado-red {
+            background-color: red;
+            /*Posição - static*/
+            /*Posicionamento padrão*/
+            position: static;
+        }
+
+        .quadrado-blue {
+            background-color: blue;
+            /*Posição - relative*/
+            /*A posição é relativa ao 
+            posicionamento padrão*/
+            position: relative;
+            /*Posição relativa - left, right, top, bottom*/
+            left: 400px;
+            top: 200px;
+        }
+
+        .quadrado-green {
+            background-color: green;
+            /*Posição - absolute*/
+            /*É como se o elemento não
+            ocupasse espaço*/
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .quadrado-yellow {
+            background-color: yellow;
+            /*Posição - fixed*/
+            /*É como se o elemento não
+            ocupasse espaço também*/
+            /*A posição é relativa a viewport*/
+            /*Mantém o elemento fixo 
+            em relação a viewport*/
+            position: fixed;
+            right: 0px;
+
+        }
+
+        .quadrado-black {
+            background-color: black;
+            /*Posição - sticky*/
+            /*A posição também é relativa a viewport*/
+            /*Mantém o elemento grudado
+            em relação a viewport*/
+            position: sticky;
+            top: 0px;
+        }
+
+        .quadro {
+            width: 500px;
+            height: 1100px;
+            border: 1px solid gray;
+            /*O elemento com posicionamento absoluto
+            vai procurar o primeiro elemento que 
+            encontrar que não tenha posicionamento 
+            estático para servir de referência*/
+            position: relative;
+        }
+
+        body {
+            font: 1.2rem;
+        }
+
+        #i1 {
+            float: left;
+        }
+
+        p {
+            /*Clear - left, right, both, none*/
+            /*Elimina o efeito da flutuação*/
+            clear: none;
+        }
+
+        .float{
+            border: 1px solid black;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #b2c3a6;
+            overflow: auto;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            float: left;
+            padding: 10px;
+            background-color: #a3b5c7;
+            margin: 5px;
+            float: right;
+        }
+
+        .card{
+            width: 400px;
+            height: 200px;
+            border: 2px solid green;
+            float: left;
+            text-align: center;
+            position: relative;
+            margin-left: 10px;
+        }
+
+        .c1{
+            /*Alinhamento vertical - line-height*/
+            /*Tamanho do pai - px*/
+            line-height: 200px;
+
+        }
+
+        .c2{
+            /*Alinhamento vertical - position: absolute*/
+            /*Topo e esquerda - 50%*/
+            /*Transformação: translação(-50%(eixo X), -50%(eixo Y))*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .card2{
+            clear: left;
+            float: left;
+            border: 2px solid green;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            margin-top: 10px;
+        }
+
+        .footer{
+            background-color: gray;
+            margin: auto;
+            height: 100px;
+            width: 80%;
+        }
+
+        .content{
+            width: 70%;
+            height: 70%;
+            margin: auto;
+            background-color: blue;
+            text-align: center;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--DISPLAY-->
+
+    <div style="background-color: blue;">
+        <div>Esta é uma DIV normal</div>
+        <div>E aqui a história
+            <!--Display: block-->
+            <!--Dá pra modificar a largura e altura-->
+            <div style="background-color: red; width: 500px; height: 50px;">Div de dentro</div>
+            continua
+        </div>
+    </div>
+
+    <div>
+        <!--Display: block-->
+        <!--Margem padrão-->
+        <p style="margin: 0;">Este é um paragráfo normal</p>
+        <p style="margin: 0;">E aqui a história continua</p>
+    </div>
+
+    <p>
+        Aqui eu tenho o inicio de um parágrafo
+        <!--Display: inline-->
+        <!--Não dá pra modificar a largura e altura-->
+        <span style="background-color: green; width: 500px; height: 50px; display: inline-block;">um SPAN no meio</span>
+        E o fim do parágrafo
+        <!--Display: inline-block-->
+        <!--Mantém o comportamento do Display Na Linha, mas
+        permite modificar a altura e a largura-->
+    </p>
+
+
+    <!--Nunca vai poder ter um elemento do tipo 
+    Display Bloco dentro de um paragráfo: div-->
+    <p style="background-color: blue;">
+        Aqui eu tenho o inicio de um parágrafo
+    <div style="background-color: red;">uma div no meio</div> E o fim do parágrafo
+    </p>
+
+    <p>
+        Aqui eu tenho o inicio de um parágrafo
+        <!--Display: none-->
+        <!--Faz como que o elemento nunca tivesse 
+        sido colocado na tela-->
+        <img style="width: 400px; display: none;" src="../tiposcss/paginas/imagens/yonkous.webp" alt="">E o fim do
+        parágrafo
+    </p>
+
+    <!--POSITION-->
+
+    <div class="quadro">
+        <div class="quadrado quadrado-red"></div>
+        <div class="quadrado quadrado-blue"></div>
+        <div class="quadrado quadrado-green"></div>
+        <div class="quadrado quadrado-yellow"></div>
+        <div class="quadrado quadrado-black"></div>
+    </div>
+
+    <!--FLOAT-->
+
+    <div class="float">
+
+        <img id="i1" src="../tiposcss/paginas/imagens/yonkous.webp" alt="">
+        <p>
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+            Texto qualquerTexto qualquerTexto qualquer
+        </p>
+    </div>
+
+    <ul>
+        <li>Home</li>
+        <li>Cursos</li>
+        <li>Contato</li>
+    </ul>
+
+    <!--ALINHAMENTO VERTICAL-->
+
+    <div class="card">
+        <div class="c1">
+            William Gomes
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="c2">
+            William Gomes
+        </div>
+    </div>
+
+    <div class="card2">
+        <div style="background-color: red;">
+            William Gomes
+        </div>
+    </div>
+
+    <!--RESPONSIVIDADE-->
+
+    <a href="../tiposcss/paginas/respons.html">Responsividade</a>
+    <a href="../tiposcss/paginas/mediaQueries.html">Media Queries</a>
+
+
+</body>
+
+</html>

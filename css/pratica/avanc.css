@@ -1,0 +1,215 @@
+/*PSEUDO ELEMENTOS*/
+
+/*EXERCÍCIO 1*/
+
+h2::first-letter{
+    font-size: 32px;
+    color: red;
+}
+
+/*EXERCÍCIO 2*/
+
+a::after{
+    content: ">";
+}
+
+/*EXERCÍCIO 3*/
+
+li::before{
+    content: "-";
+}
+
+/*EXERCÍCIO 4*/
+
+p::selection {
+    background-color: blue;
+    color: yellow;
+}
+
+/*EXERCÍCIO 5*/
+
+blockquote::first-line{
+    font-size: 32px;
+    font-style: italic;
+}
+
+/*SELETORES*/
+
+/*EXERCÍCIO 1*/
+
+h6{
+    background-color: aquamarine;
+}
+
+p{
+    color: orange;
+}
+
+ol{
+    font-size: 30px;
+}
+
+/*EXERCÍCIO 2*/
+
+.div1{
+    color: red;
+}
+
+.div2{
+    color: blue;
+}
+
+.div3{
+    color: green;
+}
+
+/*EXERCÍCIO 3*/
+
+.divPai > div{
+    color: purple;
+}
+
+/*EXERCÍCIO 4*/
+
+[target]{
+    background-color: aqua;
+}
+
+/*EXERCÍCIO 5*/
+
+.vo div div span{
+    color: green;
+    font-weight: bold;
+}
+
+/*PSEUDO CLASSES*/
+
+/*EXERCÍCIO 1*/
+
+.link:link{
+    color: orange;
+}
+
+.visited:visited{
+    color: green;
+}
+
+.hover:hover{
+    color: red;
+}
+
+.active:active{
+    color: yellow;
+}
+
+/*EXERCÍCIO 2*/
+
+.pares>li:nth-child(even){
+    color: aqua;
+}
+
+/*EXERCÍCIO 3*/
+
+.inp1:focus{
+    color: brown;
+}
+
+.inp2:focus{
+    color: greenyellow;
+}
+
+.inp3:focus{
+    color: blueviolet;
+}
+
+/*EXERCÍCIO 4*/
+
+td:hover{
+    background-color: orangered;
+}
+
+/*EXERCÍCIO 5*/
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+button:active{
+    background-color: red;
+    color: green;
+}
+
+/*FUNÇÃO CALC CSS*/
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 25%; /* 25% do container */
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.main-content {
+    width: calc(75% - 40px); /* 75% do container - 40px de espaço para o padding */
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+/*TRANSFORM*/
+
+.elemento {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.elemento:hover {
+    transform: rotate(360deg);
+}
+
+/*VARIÁVEIS NO CSS*/
+
+:root {
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2ecc71;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+header {
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+
+
+

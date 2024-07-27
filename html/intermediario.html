@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Intermediário</title>
+</head>
+<body>
+
+<!-- Formulário -->
+
+    <form method="GET" action="https://www.youtube.com/results">
+
+        <input type="text" name="search_query">
+        <input type="submit">
+        <input type="reset" value="Apagar">
+
+    </form>
+    <br>
+
+<!-- Tipos de Input -->
+
+    <form method="POST" action="">
+
+        <input type="password" name="senha">
+        <input type="submit">
+        <input type="reset" value="Sumir"><br><br>
+    </form>
+
+    <form method="GET" action="">
+        <input type="checkbox" name="almirantes" value="op1">Akainu Sakazuki<br>
+        <input type="checkbox" name="almirantes" value="op2">Aokiji Kuzan<br>
+        <input type="submit">
+        <input type="reset"><br><br>
+    
+    <form method="GET" action="">
+        <input type="radio" name="genero" value="m" checked>Masculino<br>
+        <input type="radio" name="genero" value="f">Feminino<br>
+        <input type="submit">
+        <input type="reset" value="Limpar"><br><br>
+    </form>
+
+<!-- Select -->
+
+    <form method="GET" action="">
+
+        <select name="yonkous" size="3" multiple>
+            <option value="Cem Feras">Kaido</option>
+            <option value="Big Mom">Charlotte Linlin</option>
+            <option value="O Ruivo">Shanks</option>
+            <option value="Barba Branca">Edward Newgate</option>
+            <option value="Barba Negra">Marshall D. Teach</option>
+            <option value="Chapéu de Palha" selected>Monkey D. Luffy</option>
+            <option value="O Palhaço">Buggy</option>
+        </select>
+
+        <input type="submit">
+
+    </form>
+    
+    <br>
+
+<!-- Textarea -->
+
+    <form method="GET" action="">
+
+        <input type="text" name="assunto"><br>
+
+        <textarea name="mensagem"></textarea>
+
+        <input type="submit">
+
+    </form>
+
+    <br>
+
+<!-- Input HTML 5 -->
+
+    <form method="GET" action="">
+
+        <input type="color" name="cor"><br>
+        <input type="date" name="data" max="2020-12-31"><br>
+        <input type="datetime-local" name="data e hora"><br>
+        <input type="number" name="numerico" min="5" max="10"><br>
+        <input type="range" min="3" max="9" name="intervalo" value="6"><br>
+        <input type="tel" name="telefone"><br>
+        <input type="email" name="email"><br>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <form method="POST" action="">
+
+        <input type="file" name="arquivo">
+        <input type="submit">
+
+    </form>
+
+<!-- Tags Semânticas -->
+
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+
+    <main>
+        <section>
+
+        </section>
+
+        <article>
+            
+        </article>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+
+
+</body>
+</html>

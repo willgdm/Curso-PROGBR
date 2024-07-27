@@ -1,0 +1,174 @@
+.container{
+    color: white;
+    padding: 10px;
+    background-color: gray;
+    height: 500px;
+
+    /*TEMPLATE*/
+
+    /*Grid - display:grid*/
+    /*Define o display como grid*/
+    display: grid;
+    /*Grid template - auto, %, px, fr(fração)*/
+    /*Define a quantidade de linhas da grid*/
+    grid-template-rows: auto auto;
+    /*Define a quantidade de colunas da grid*/
+    grid-template-columns: auto auto auto;
+    /*Define a quantidade de linhas e colunas
+    da grid de uma vez só*/
+    grid-template: auto auto / auto auto auto;
+
+    /*GAP*/
+
+    /*Gap - px*/
+    /*Define o espaçamento entre as linhas e as colunas*/
+    gap: 10px;
+
+    /*JUSTIFY E ALIGN ITEMS*/
+    
+    /*Justify items - flex-end, strecth(padrão), 
+    center, flex-start*/
+    /*Justifica os itens colocando ele no final
+    em relação a coluna*/
+    justify-items: flex-end;
+    /*Justifica os itens centralizando ele
+    em relação a coluna*/
+    justify-items: center;
+
+    /*Align items - flex-end, stretch(padrão),
+    center, flex-start*/
+    /*Alinha os itens colocando ele no final
+    em relação a linha*/
+    align-items: flex-end;
+    /*Alinha os itens centralizando ele
+    em relação a linha*/
+    align-items: center;
+
+    /*JUSTIFY E ALIGN CONTENT*/
+
+    /*Justify content - flex-end, strecth(padrão), 
+    center, flex-start, space-between, space-around,
+    space-evenly*/
+    /*Justifica o conteúdo colocando ele no final
+    tirando o espaco entre as colunas*/
+    justify-content: flex-end;
+    /*Justifica o conteúdo centralizando ele
+    tirando o espaço entre as colunas*/
+    justify-content: center;
+    /*Tenta manter um espaço igual entre os e, c e i*/
+    justify-content: space-between;
+    /*Tenta manter um espaço igual ao redor dos e, c e i*/
+    justify-content: space-around;
+    /*Tenta manter um espaço igual entre os e, c e i
+    e também entre a borda*/
+    justify-content: space-evenly;
+
+
+    /*Align content - flex-end, strecth(padrão), 
+    center, flex-start*/
+    /*Alinha o conteúdo colocando ele no final
+    tirando o espaco entre as linhas*/
+    align-content: flex-end;
+    /*Alinha o conteúdo centralizando ele
+    tirando o espaço entre as linhas*/
+    align-content: center;
+
+    /*TEMPLATE AREA*/
+
+    /*Grid template areas - grid com os nomes das áreas*/
+    /*
+    grid-template-areas: "a2 a2 a2 a2 a2 a2"
+                         "a1 a1 a3 a3 a3 a3"
+                         "a4 a4 a4 a5 a5 a5"
+                         "a6 a6 a6 a6 a6 a6"
+    */
+
+    /*COLUMN E ROW & START E END*/
+
+    /*grid-template: auto auto auto auto/auto auto auto auto auto auto*/
+}
+
+.r1{
+    background-color: red;
+}
+
+.r2{
+    background-color: blue;
+}
+
+.r3{
+    background-color: green;
+}
+
+.rect{
+    width: 100px;
+    height: 100px;
+}
+
+/*TEMPLATE AREA*/
+
+/*Grid area - nome da área*/
+/*
+.item1{
+    grid-area: a1; 
+}
+
+.item2{
+    grid-area: a2; 
+}
+
+.item3{
+    grid-area: a3; 
+}
+
+.item4{
+    grid-area: a4; 
+}
+
+.item5{
+    grid-area: a5; 
+}
+
+.item6{
+    grid-area: a6; 
+}
+*/
+
+/*COLUMN E ROW & START E END*/
+
+/*
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;(+1)
+    /*Linha inicial do item
+    grid-row-start: 2;
+    /*Linha final do item(+1)
+    grid-row-end: 4;
+}
+
+.item2{
+    /*Coluna inicial do item
+    grid-column-start: 1;
+    /*Coluna final do final(+1)
+    grid-column-end: 7;
+}
+
+.item3{
+    /*Expandir 4 colunas
+    grid-column-end: span 4;
+}
+
+.item4{
+    grid-column-start: 4;
+    grid-column-end: 7;(+1)
+}
+
+.item5{
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+.item6{
+    grid-column-end: span 6;
+}
+*/
